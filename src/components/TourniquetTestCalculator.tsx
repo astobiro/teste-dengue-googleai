@@ -83,7 +83,7 @@ export const TourniquetTestCalculator: React.FC<TourniquetTestCalculatorProps> =
               Prova do Laço (Teste do Torniquete)
             </h3>
             <p className="text-xs text-slate-500 mt-0.5">
-              Avaliação de Fragilidade Capilar e Sangramento Induzido • Ministério da Saúde
+              Avaliação de Fragilidade Capilar e Sangramento Induzido • Protocolo Clínico
             </p>
           </div>
         </div>

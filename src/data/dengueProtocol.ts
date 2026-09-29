@@ -1,7 +1,7 @@
 import { DengueGroup, TriageResult, WarningSigns, SeveritySigns, SpecialConditions } from '../types';
 
 export const SUSPECTED_DENGUE_DEFINITION = {
-  title: 'Definição de Caso Suspeito de Dengue (Ministério da Saúde)',
+  title: 'Definição de Caso Suspeito de Dengue',
   feverCriteria: 'Relato de febre, usualmente entre 2 e 7 dias de duração',
   symptomThreshold: 'E 2 (duas) ou mais das seguintes manifestações clínicas:',
   symptomsList: [

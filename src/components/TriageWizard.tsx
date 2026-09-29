@@ -286,7 +286,7 @@ export const TriageWizard: React.FC<TriageWizardProps> = ({
                 Classificação de Risco & Triagem de Dengue
               </h2>
               <p className="text-xs text-slate-500 mt-0.5">
-                Fluxograma Oficial do Ministério da Saúde • Grupos A, B, C e D
+                Fluxograma de Manejo Clínico • Grupos A, B, C e D
               </p>
             </div>
           </div>
@@ -828,7 +828,7 @@ export const TriageWizard: React.FC<TriageWizardProps> = ({
               <span>🦟</span> Avaliação de Suspeita Clínica e Sintomas Gerais
             </h3>
             <p className="text-xs sm:text-sm text-slate-500 mt-1">
-              Verifique se o paciente preenche os critérios oficiais de caso suspeito de dengue do Ministério da Saúde.
+              Verifique se o paciente preenche os critérios clínicos de caso suspeito de dengue.
             </p>
           </div>
 
@@ -931,7 +931,7 @@ export const TriageWizard: React.FC<TriageWizardProps> = ({
                 </h5>
                 <p className="text-xs mt-0.5 opacity-90">
                   {isDengueSuspected
-                    ? 'O paciente preenche os critérios oficiais do Ministério da Saúde. Finalize para obter o plano de conduta terapêutica.'
+                    ? 'O paciente preenche os critérios clínicos de caso suspeito. Finalize para obter o plano de conduta terapêutica.'
                     : 'Febre entre 2 e 7 dias associada a 2 ou mais sintomas clínicos é necessária para definição de caso de dengue. Reavalie diagnósticos diferenciais.'}
                 </p>
               </div>

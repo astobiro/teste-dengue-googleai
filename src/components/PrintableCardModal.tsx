@@ -14,11 +14,13 @@ interface PrintableCardModalProps {
     warningSigns?: string[];
   };
   onClose: () => void;
+  isModal?: boolean;
 }
 
 export const PrintableCardModal: React.FC<PrintableCardModalProps> = ({
   initialData,
   onClose,
+  isModal = true,
 }) => {
   // Current local date & time formatted
   const now = new Date();
@@ -107,8 +109,8 @@ export const PrintableCardModal: React.FC<PrintableCardModalProps> = ({
   }[selectedGroup];
 
   return (
-    <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
-      <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-5xl overflow-hidden my-4 max-h-[96vh] flex flex-col">
+    <div className={`printable-modal-backdrop ${isModal ? 'fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-2 sm:p-4 overflow-y-auto' : 'w-full'}`}>
+      <div className={`printable-modal-card bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-5xl overflow-hidden my-4 ${isModal ? 'max-h-[96vh]' : ''} flex flex-col`}>
         {/* Modal Top Header (No print) */}
         <div className="bg-white border-b border-slate-200 p-3 sm:p-4 flex items-center justify-between no-print flex-shrink-0 border-l-[6px] border-l-[#2563EB]">
           <div className="flex items-center gap-3">
@@ -248,7 +250,7 @@ export const PrintableCardModal: React.FC<PrintableCardModalProps> = ({
         {/* PRINTABLE COMPREHENSIVE DOCUMENT BODY */}
         <div className="p-6 sm:p-8 overflow-y-auto bg-white flex-1 print-page space-y-5 text-slate-800">
           
-          {/* 1. OFFICIAL INSTITUTIONAL HEADER */}
+          {/* 1. INSTITUTIONAL HEADER */}
           <div className="border-b-2 border-slate-800 pb-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="flex items-start gap-3">
               <div className="w-11 h-11 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-2xl shadow-2xs flex-shrink-0">
@@ -256,20 +258,20 @@ export const PrintableCardModal: React.FC<PrintableCardModalProps> = ({
               </div>
               <div>
                 <span className="text-[10px] font-black tracking-widest text-[#2563EB] uppercase block">
-                  MINISTÉRIO DA SAÚDE • SISTEMA ÚNICO DE SAÚDE (SUS)
+                  PROTOCOLO CLÍNICO DE MANEJO DA DENGUE
                 </span>
                 <h1 className="text-base sm:text-lg font-black text-slate-900 leading-tight uppercase">
                   CLASSIFICAÇÃO DE RISCO E MANEJO CLÍNICO DE DENGUE
                 </h1>
                 <p className="text-[11px] text-slate-500 font-medium">
-                  Protocolo Oficial de Manejo Clínico e Vigilância Epidemiológica • 6ª Edição Revisada
+                  Diretrizes de Manejo Clínico e Vigilância Epidemiológica • 6ª Edição Revisada
                 </p>
               </div>
             </div>
 
             <div className="text-right sm:border-l sm:border-slate-200 sm:pl-4 flex-shrink-0">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg border font-black text-xs uppercase tracking-wide bg-slate-900 text-white">
-                <span>DOCUMENTO CLÍNICO OFICIAL</span>
+                <span>DOCUMENTO CLÍNICO</span>
               </div>
             </div>
           </div>
@@ -334,7 +336,7 @@ export const PrintableCardModal: React.FC<PrintableCardModalProps> = ({
                     {initialData?.title || groupBadgeConfig.name}
                   </h2>
                   <p className="text-xs text-slate-600 font-medium">
-                    {initialData?.subtitle || 'Classificação oficial baseada no fluxograma do Ministério da Saúde'}
+                    {initialData?.subtitle || 'Classificação clínica baseada no protocolo de manejo de dengue'}
                   </p>
                 </div>
               </div>

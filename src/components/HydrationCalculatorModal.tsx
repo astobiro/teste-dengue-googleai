@@ -68,10 +68,10 @@ export const HydrationCalculatorModal: React.FC<HydrationCalculatorModalProps> =
           <div>
             <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Protocolo de Fluidoterapia</p>
             <h3 className="text-lg sm:text-xl font-bold text-slate-800 tracking-tight">
-              Calculadora Oficial de Hidratação na Dengue
+              Calculadora de Hidratação na Dengue
             </h3>
             <p className="text-xs text-slate-500 mt-0.5">
-              Diretrizes do Ministério da Saúde • Adultos e Crianças (Grupos A, B, C e D)
+              Diretrizes Clínicas • Adultos e Crianças (Grupos A, B, C e D)
             </p>
           </div>
         </div>

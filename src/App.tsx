@@ -60,7 +60,7 @@ export default function App() {
       />
 
       {/* Main App Content Container */}
-      <main className="flex-1 max-w-7xl w-full mx-auto p-3 sm:p-4 lg:p-6 space-y-6">
+      <main className={`flex-1 max-w-7xl w-full mx-auto p-3 sm:p-4 lg:p-6 space-y-6 ${isCardPrintModalOpen ? 'no-print' : ''}`}>
         {/* TAB 1: TRIAGEM & CLASSIFICAÇÃO INICIAL */}
         {activeTab === 'triagem' && (
           <TriageWizard
@@ -93,7 +93,7 @@ export default function App() {
           </div>
         )}
 
-        {/* TAB 4: FLUXOGRAMA OFICIAL */}
+        {/* TAB 4: FLUXOGRAMA DE MANEJO */}
         {activeTab === 'fluxograma' && (
           <FlowchartVisualizer onSelectGroup={handleSelectGroupFromFlowchart} />
         )}
@@ -103,31 +103,15 @@ export default function App() {
 
         {/* TAB 6: CARTÃO DE ACOMPANHAMENTO (STANDALONE GENERATOR) */}
         {activeTab === 'cartao' && (
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 border-l-[6px] border-l-[#2563EB] p-5 sm:p-6">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-slate-100 pb-4 mb-6 gap-3">
-              <div>
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Documento Oficial</p>
-                <h3 className="text-xl font-bold text-slate-800">
-                  Cartão de Acompanhamento do Paciente com Dengue
-                </h3>
-                <p className="text-xs text-slate-500 mt-0.5">
-                  Preencha os dados e clique em Imprimir para gerar a via física para o paciente.
-                </p>
-              </div>
-              <button
-                onClick={() => window.print()}
-                className="bg-[#2563EB] hover:bg-blue-700 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-md shadow-blue-200 transition"
-              >
-                🖨️ Imprimir / Salvar PDF
-              </button>
-            </div>
+          <div className="w-full">
             <PrintableCardModal
+              isModal={false}
               onClose={() => setActiveTab('triagem')}
               initialData={{
                 patientName: 'Nome do Paciente',
                 patientAge: 30,
                 patientWeight: 70,
-                facilityName: 'Unidade Básica de Saúde / UPA',
+                facilityName: 'Unidade de Saúde / Pronto Atendimento',
                 attendingProfessional: 'Profissional de Saúde',
                 group: DengueGroup.GROUP_A,
                 title: 'GRUPO A — Dengue sem Sinais de Alarme',
@@ -231,7 +215,7 @@ export default function App() {
             <p className="font-bold text-slate-700 flex items-center justify-center md:justify-start gap-2">
               <span>Manejo Clínico de Dengue</span>
               <span className="text-slate-300">•</span>
-              <span className="text-[#2563EB]">Ministério da Saúde</span>
+              <span className="text-[#2563EB]">Protocolo Clínico de Dengue</span>
             </p>
             <p className="text-[11px] text-slate-400">
               Baseado na 6ª edição revisada do Guia de Vigilância em Saúde e no Manual de Diagnóstico e Manejo Clínico da Dengue.
@@ -260,7 +244,7 @@ export default function App() {
 
         <div className="max-w-7xl mx-auto mt-3 pt-3 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between text-[10px] text-slate-400 gap-2">
           <span>Aviso: Ferramenta digital de apoio clínico e decisão médica/enfermagem.</span>
-          <span className="font-mono text-slate-400 uppercase">Protocolo Ministério da Saúde 2024 / 2026</span>
+          <span className="font-mono text-slate-400 uppercase">Protocolo Clínico 2024 / 2026</span>
         </div>
       </footer>
     </div>

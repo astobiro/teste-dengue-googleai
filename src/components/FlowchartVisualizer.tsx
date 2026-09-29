@@ -39,7 +39,7 @@ export const FlowchartVisualizer: React.FC<FlowchartVisualizerProps> = ({ onSele
             <div>
               <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Algoritmo Decisório</p>
               <h2 className="text-lg sm:text-xl font-bold text-slate-800 tracking-tight">
-                Fluxograma Oficial de Manejo Clínico de Dengue (Ministério da Saúde)
+                Fluxograma de Manejo Clínico de Dengue
               </h2>
               <p className="text-xs text-slate-500 mt-0.5">
                 Navegação interativa por todas as etapas da árvore de decisão clínica • Grupos A, B, C e D

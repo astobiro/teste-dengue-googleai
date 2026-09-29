@@ -47,7 +47,7 @@ export const ClinicalGuide: React.FC = () => {
               Guia Clínico & Critérios de Manejo da Dengue
             </h2>
             <p className="text-xs text-slate-500 mt-0.5">
-              Manual de Manejo Clínico de Dengue • Ministério da Saúde (Brasil)
+              Manual de Manejo Clínico de Dengue • Diretrizes de Diagnóstico e Conduta
             </p>
           </div>
         </div>
@@ -138,7 +138,7 @@ export const ClinicalGuide: React.FC = () => {
           <div className="bg-slate-900 text-white rounded-2xl p-5 sm:p-6 space-y-3 border border-slate-800">
             <h4 className="text-sm font-bold text-red-300 flex items-center gap-2 uppercase tracking-wide">
               <ShieldAlert className="w-4 h-4 text-red-400" />
-              Manejo do Choque Refratário à Expansão Cristalóide (Ministério da Saúde)
+              Manejo do Choque Refratário à Expansão Cristalóide
             </h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-200">
               <div className="bg-slate-800 p-3.5 rounded-xl border border-slate-700 space-y-1">

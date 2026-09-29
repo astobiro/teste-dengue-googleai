@@ -26,7 +26,7 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'triagem', label: 'Classificação de Risco', icon: ClipboardList, emoji: '📋' },
     { id: 'hidratacao', label: 'Calculadora de Hidratação', icon: Droplets, emoji: '💧' },
     { id: 'laco', label: 'Prova do Laço', icon: Stethoscope, emoji: '🩺' },
-    { id: 'fluxograma', label: 'Fluxograma Oficial', icon: Network, emoji: '🦟' },
+    { id: 'fluxograma', label: 'Fluxograma de Manejo', icon: Network, emoji: '🦟' },
     { id: 'guia', label: 'Guia Clínico & Alarme', icon: BookOpen, emoji: '📚' },
     { id: 'cartao', label: 'Cartão de Acompanhamento', icon: FileText, emoji: '📄' },
   ];
@@ -57,7 +57,7 @@ export const Header: React.FC<HeaderProps> = ({
             <PhoneCall className="w-3 h-3 text-emerald-600" /> Disque Saúde 136
           </span>
           <span className="bg-slate-200/80 text-slate-700 px-2 py-0.5 rounded text-[10px] font-mono font-bold">
-            MS 2024 / 2026
+            Diretrizes 2024 / 2026
           </span>
         </div>
       </div>
@@ -79,7 +79,7 @@ export const Header: React.FC<HeaderProps> = ({
                   DengueFlow <span className="text-[#2563EB] font-medium text-sm sm:text-base">| Manejo Clínico</span>
                 </h1>
                 <p className="text-slate-500 text-[11px] sm:text-xs font-normal">
-                  Classificação de Risco e Manejo Clínico (Ministério da Saúde)
+                  Classificação de Risco e Manejo Clínico da Dengue
                 </p>
               </div>
             </div>
